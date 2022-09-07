@@ -61,7 +61,7 @@ def replace_bn(module, name, nl):
 		if type(icm) == torch.nn.BatchNorm2d:
 			new_bn = nl(icm)
 			setattr(module, name, new_bn)
-		replace_bn(icm, name, nl_fn)
+		replace_bn(icm, name, nl)
 
 ###########################################################################
 ## Example
